@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Ultimate Task Manager</title>
+</head>
+
+<body>
+
+  <!-- Hamburger Button -->
+  <button class="hamburger" id="hamburger">
+    ☰
+  </button>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-square"></i>
+      <span>Task Manager</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="nav-item active"><img src="clipboard-list.svg" alt="">All Tasks</a>
+      <a href="#" class="nav-item"><img src="calendar-clock.svg" alt="">Today</a>
+      <a href="#" class="nav-item"><img src="star.svg" alt="">Favorites</a>
+
+      <a class="nav-item projects-toggle" id="projects-toggle">
+        <img src="folder.svg" alt=""> Projects
+      </a>
+      <div class="projects-list" id="projects-list">
+        <a href="#" class="project-item">Project 1</a>
+        <a href="#" class="project-item">Project 2</a>
+        <a href="#" class="project-item">Project 3</a>
+      </div>
+
+      <a class="nav-item completed-toggle" id="completed-toggle">
+        <img src="check-circle.svg" alt=""> Completed
+      </a>
+      <div class="completed-list" id="completed-list">
+        <div class="completed-list-today" id="completed-list-today">
+          <h4>Today</h4>
+          <a href="#" class="completed-item">Task 1</a>
+          <a href="#" class="completed-item">Task 2</a>
+          <a href="#" class="completed-item">Task 3</a>
+        </div>
+        <div class="completed-list-yesterday" id="completed-list-yesterday">
+          <h4>Yesterday</h4>
+          <a href="#" class="completed-item">Task 1</a>
+          <a href="#" class="completed-item">Task 2</a>
+          <a href="#" class="completed-item">Task 3</a>
+        </div>
+      </div>
+
+      <a href="#" class="nav-item"><img src="settings.svg" alt="">Settings</a>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Add Task Button -->
+    <div class="add-task-button-container">
+      <button id="addTaskButton">
+        <i class="fas fa-plus"></i> Add Task
+      </button>
+    </div>
+
+    <!-- Task Cards Container -->
+    <div class="task-cards" id="taskCards">
+      <!-- Task cards will be added here dynamically -->
+    </div>
+  </div>
+
+  <!-- Add Task Form (Hidden by default) -->
+  <div class="add-task-form-container" id="addTaskFormContainer">
+    <div class="add-task-form">
+      <h2>Add New Task</h2>
+      <form id="newTaskForm">
+        <input type="text" id="taskTitle" placeholder="Task Title" required>
+        <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+        <button type="submit">Add Task</button>
+        <button type="button" id="cancelTaskButton">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

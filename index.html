@@ -31,9 +31,7 @@
         <img src="folder.svg" alt=""> Projects
       </a>
       <div class="projects-list" id="projects-list">
-        <a href="#" class="project-item">Project 1</a>
-        <a href="#" class="project-item">Project 2</a>
-        <a href="#" class="project-item">Project 3</a>
+        <!-- Projects will be loaded here dynamically -->
       </div>
 
       <a class="nav-item completed-toggle" id="completed-toggle">
@@ -66,6 +64,17 @@
       <button type="submit"><i class="fas fa-search"></i></button>
     </div>
 
+    <!-- Filter Dropdown -->
+    <div class="filter-container">
+      <label for="priorityFilter">Priority:</label>
+      <select id="priorityFilter">
+        <option value="all">All</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+
     <!-- Add Task Button -->
     <div class="add-task-button-container">
       <button id="addTaskButton">
@@ -86,13 +95,21 @@
       <form id="newTaskForm">
         <input type="text" id="taskTitle" placeholder="Task Title" required>
         <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+        <input type="date" id="taskDueDate" placeholder="Due Date" required>
+        <select id="taskPriority" required>
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <input type="text" id="taskProject" placeholder="Project Name">
         <button type="submit">Add Task</button>
         <button type="button" id="cancelTaskButton">Cancel</button>
       </form>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
+

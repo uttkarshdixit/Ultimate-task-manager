@@ -353,3 +353,87 @@ body {
 .search-container button:hover {
   background-color: #555;
 }
+
+
+/* Main Content Layout Adjustments */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  width: calc(100% - 240px);
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-container button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-container button i {
+  pointer-events: none;
+}
+
+/* Filter Dropdown */
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+}
+
+.filter-container label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter-container select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Add Task Button */
+.add-task-button-container {
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+
+#addTaskButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+}
+
+#addTaskButton i {
+  margin-right: 6px;
+}
